@@ -1,0 +1,31 @@
+{
+  // GitHub Copilotを完全に無効化
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "typescript": false,
+    "javascript": false
+  },
+  "github.copilot.inlineSuggest.enable": false,
+  "github.copilot.editor.enableAutoCompletions": false,
+
+  // すべてのインライン提案を無効化
+  "editor.inlineSuggest.enabled": false,
+
+  // 自動補完を無効化
+  "editor.suggest.showSnippets": false,
+  "editor.quickSuggestions": {
+    "other": "off",
+    "comments": "off",
+    "strings": "off"
+  },
+  "editor.suggestOnTriggerCharacters": false,
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.tabCompletion": "off",
+  "editor.wordBasedSuggestions": "off",
+
+  // パラメータヒントも無効化
+  "editor.parameterHints.enabled": false
+}
