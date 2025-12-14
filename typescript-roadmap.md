@@ -9,13 +9,13 @@ TypeScriptの基本的な型システムをじっくり固めます。初心者�
 
 ### フェーズ1: 型の基本（Day01-05）
 
-| Day | テーマ | 関数名例 | 学習内容 |
-|-----|--------|----------|----------|
-| 01 | 型ガードとバリデーション | `parseUser` | unknown型、typeof、in演算子、Result型 |
-| 02 | 配列のフィルタリング | `filterValid` | 配列操作、型ガード、filter関数 |
-| 03 | オプショナル型とnullish | `getProperty` | undefined/null、Optional Chaining、Nullish Coalescing |
-| 04 | 配列の変換 | `mapToNames` | map関数、型推論、readonly配列 |
-| 05 | オブジェクトのマッピング | `transformUser` | オブジェクト操作、型安全なプロパティアクセス |
+| Day | テーマ                   | 関数名例        | 学習内容                                              |
+| --- | ------------------------ | --------------- | ----------------------------------------------------- |
+| 01  | 型ガードとバリデーション | `parseUser`     | unknown型、typeof、in演算子、Result型                 |
+| 02  | 配列のフィルタリング     | `filterValid`   | 配列操作、型ガード、filter関数                        |
+| 03  | オプショナル型とnullish  | `getProperty`   | undefined/null、Optional Chaining、Nullish Coalescing |
+| 04  | 配列の変換               | `mapToNames`    | map関数、型推論、readonly配列                         |
+| 05  | オブジェクトのマッピング | `transformUser` | オブジェクト操作、型安全なプロパティアクセス          |
 
 **フェーズ1のポイント:**
 
@@ -25,13 +25,13 @@ TypeScriptの基本的な型システムをじっくり固めます。初心者�
 
 ### フェーズ2: 配列操作の応用（Day06-10）
 
-| Day | テーマ | 関数名例 | 学習内容 |
-|-----|--------|----------|----------|
-| 06 | 配列の集計 | `sumScores` | reduce関数、初期値の型、accumulator |
-| 07 | 配列のグルーピング | `groupByCategory` | Map型、グループ化、型安全な辞書操作 |
-| 08 | 配列のソート | `sortByProperty` | 比較関数、型安全なソート、カスタム順序 |
-| 09 | 配列のフラット化 | `flattenArray` | ネストした配列、flatMap、型の再帰 |
-| 10 | 配列の検索 | `findByCondition` | find/findIndex、型の絞り込み、検索条件 |
+| Day | テーマ             | 関数名例          | 学習内容                               |
+| --- | ------------------ | ----------------- | -------------------------------------- |
+| 06  | 配列の集計         | `sumScores`       | reduce関数、初期値の型、accumulator    |
+| 07  | 配列のグルーピング | `groupByCategory` | Map型、グループ化、型安全な辞書操作    |
+| 08  | 配列のソート       | `sortByProperty`  | 比較関数、型安全なソート、カスタム順序 |
+| 09  | 配列のフラット化   | `flattenArray`    | ネストした配列、flatMap、型の再帰      |
+| 10  | 配列の検索         | `findByCondition` | find/findIndex、型の絞り込み、検索条件 |
 
 **フェーズ2のポイント:**
 
@@ -41,13 +41,13 @@ TypeScriptの基本的な型システムをじっくり固めます。初心者�
 
 ### フェーズ3: Union型とユーティリティ型（Day11-15）
 
-| Day | テーマ | 関数名例 | 学習内容 |
-|-----|--------|----------|----------|
-| 11 | タグ付きユニオン型 | `handleEvent` | 判別可能なユニオン、型の絞り込み |
-| 12 | 型述語（Type Predicate） | `isUser` | is演算子、カスタム型ガード関数 |
-| 13 | Readonly とイミュータブル | `freezeConfig` | Readonly、as const、DeepReadonly |
-| 14 | Partial型の活用 | `updatePartial` | Partial、オプショナルプロパティ、部分更新 |
-| 15 | Pick/Omit型の活用 | `selectFields` | Pick、Omit、型からのプロパティ選択 |
+| Day | テーマ                    | 関数名例        | 学習内容                                  |
+| --- | ------------------------- | --------------- | ----------------------------------------- |
+| 11  | タグ付きユニオン型        | `handleEvent`   | 判別可能なユニオン、型の絞り込み          |
+| 12  | 型述語（Type Predicate）  | `isUser`        | is演算子、カスタム型ガード関数            |
+| 13  | Readonly とイミュータブル | `freezeConfig`  | Readonly、as const、DeepReadonly          |
+| 14  | Partial型の活用           | `updatePartial` | Partial、オプショナルプロパティ、部分更新 |
+| 15  | Pick/Omit型の活用         | `selectFields`  | Pick、Omit、型からのプロパティ選択        |
 
 **フェーズ3のポイント:**
 
@@ -57,13 +57,13 @@ TypeScriptの基本的な型システムをじっくり固めます。初心者�
 
 ### フェーズ4: オブジェクト操作の応用（Day16-20）
 
-| Day | テーマ | 関数名例 | 学習内容 |
-|-----|--------|----------|----------|
-| 16 | Required型の活用 | `ensureComplete` | Required、必須プロパティへの変換 |
-| 17 | Record型とマッピング | `createDict` | Record型、インデックスシグネチャ、動的キー |
-| 18 | ネストしたオブジェクト操作 | `deepMerge` | ネストした型、再帰的な処理 |
-| 19 | 型安全なキーアクセス | `getNestedValue` | keyof、typeof、型安全なプロパティアクセス |
-| 20 | Intersection型 | `mergeObjects` | &演算子、型の結合、プロパティのマージ |
+| Day | テーマ                     | 関数名例         | 学習内容                                   |
+| --- | -------------------------- | ---------------- | ------------------------------------------ |
+| 16  | Required型の活用           | `ensureComplete` | Required、必須プロパティへの変換           |
+| 17  | Record型とマッピング       | `createDict`     | Record型、インデックスシグネチャ、動的キー |
+| 18  | ネストしたオブジェクト操作 | `deepMerge`      | ネストした型、再帰的な処理                 |
+| 19  | 型安全なキーアクセス       | `getNestedValue` | keyof、typeof、型安全なプロパティアクセス  |
+| 20  | Intersection型             | `mergeObjects`   | &演算子、型の結合、プロパティのマージ      |
 
 **フェーズ4のポイント:**
 
@@ -77,13 +77,13 @@ TypeScriptの基本的な型システムをじっくり固めます。初心者�
 
 ### フェーズ5: ジェネリクスの基礎（Day21-25）
 
-| Day | テーマ | 関数名例 | 学習内容 |
-|-----|--------|----------|----------|
-| 21 | ジェネリクスの基本 | `identity` | 型パラメータ、型引数、再利用可能な関数 |
-| 22 | ジェネリック配列操作 | `findFirst` | 制約付きジェネリクス、型の推論 |
-| 23 | 複数の型パラメータ | `pair` | 複数の型パラメータ、タプル型 |
-| 24 | ジェネリック制約 | `getProperty` | extends、型の制約、型安全なアクセス |
-| 25 | ジェネリックなResult型 | `resultMap` | 高階関数、エラーハンドリング |
+| Day | テーマ                 | 関数名例      | 学習内容                               |
+| --- | ---------------------- | ------------- | -------------------------------------- |
+| 21  | ジェネリクスの基本     | `identity`    | 型パラメータ、型引数、再利用可能な関数 |
+| 22  | ジェネリック配列操作   | `findFirst`   | 制約付きジェネリクス、型の推論         |
+| 23  | 複数の型パラメータ     | `pair`        | 複数の型パラメータ、タプル型           |
+| 24  | ジェネリック制約       | `getProperty` | extends、型の制約、型安全なアクセス    |
+| 25  | ジェネリックなResult型 | `resultMap`   | 高階関数、エラーハンドリング           |
 
 **フェーズ5のポイント:**
 
@@ -93,13 +93,13 @@ TypeScriptの基本的な型システムをじっくり固めます。初心者�
 
 ### フェーズ6: 非同期処理（Day26-30）
 
-| Day | テーマ | 関数名例 | 学習内容 |
-|-----|--------|----------|----------|
-| 26 | Promiseの基本 | `fetchUser` | Promise型、then/catch、型安全な非同期処理 |
-| 27 | async/await | `loadData` | async/await、エラーハンドリング |
-| 28 | 並列実行 | `fetchAll` | Promise.all、並列処理、型の配列 |
-| 29 | 逐次実行 | `processSequential` | 順次処理、for await、型安全なループ |
-| 30 | エラーハンドリング | `safeAsync` | try/catch、Result型、非同期エラー処理 |
+| Day | テーマ             | 関数名例            | 学習内容                                  |
+| --- | ------------------ | ------------------- | ----------------------------------------- |
+| 26  | Promiseの基本      | `fetchUser`         | Promise型、then/catch、型安全な非同期処理 |
+| 27  | async/await        | `loadData`          | async/await、エラーハンドリング           |
+| 28  | 並列実行           | `fetchAll`          | Promise.all、並列処理、型の配列           |
+| 29  | 逐次実行           | `processSequential` | 順次処理、for await、型安全なループ       |
+| 30  | エラーハンドリング | `safeAsync`         | try/catch、Result型、非同期エラー処理     |
 
 **フェーズ6のポイント:**
 
@@ -109,13 +109,13 @@ TypeScriptの基本的な型システムをじっくり固めます。初心者�
 
 ### フェーズ7: 高度な型操作（Day31-35）
 
-| Day | テーマ | 関数名例 | 学習内容 |
-|-----|--------|----------|----------|
-| 31 | Mapped Types | `makeOptional` | keyof、in、型のマッピング |
-| 32 | 高階関数の型付け | `pipe` | 関数型、関数の合成、型推論 |
-| 33 | Union型の操作 | `exhaustiveCheck` | never型、網羅性チェック、switch文 |
-| 34 | Exclude/Extract | `filterType` | Exclude、Extract、型の除外と抽出 |
-| 35 | NonNullable型 | `removeNulls` | NonNullable、nullを除外した型 |
+| Day | テーマ           | 関数名例          | 学習内容                          |
+| --- | ---------------- | ----------------- | --------------------------------- |
+| 31  | Mapped Types     | `makeOptional`    | keyof、in、型のマッピング         |
+| 32  | 高階関数の型付け | `pipe`            | 関数型、関数の合成、型推論        |
+| 33  | Union型の操作    | `exhaustiveCheck` | never型、網羅性チェック、switch文 |
+| 34  | Exclude/Extract  | `filterType`      | Exclude、Extract、型の除外と抽出  |
+| 35  | NonNullable型    | `removeNulls`     | NonNullable、nullを除外した型     |
 
 **フェーズ7のポイント:**
 
@@ -125,13 +125,13 @@ TypeScriptの基本的な型システムをじっくり固めます。初心者�
 
 ### フェーズ8: クラスとインターフェース（Day36-40）
 
-| Day | テーマ | 関数名例 | 学習内容 |
-|-----|--------|----------|----------|
-| 36 | クラスの基本 | `User` | クラス、プロパティ、メソッド |
-| 37 | インターフェース | `IRepository` | インターフェース、implements、型契約 |
-| 38 | 継承と抽象クラス | `BaseRepository` | extends、abstract、ポリモーフィズム |
-| 39 | アクセス修飾子 | `PrivateUser` | private、protected、public |
-| 40 | ジェネリッククラス | `Repository<T>` | クラスの型パラメータ、型安全なリポジトリ |
+| Day | テーマ             | 関数名例         | 学習内容                                 |
+| --- | ------------------ | ---------------- | ---------------------------------------- |
+| 36  | クラスの基本       | `User`           | クラス、プロパティ、メソッド             |
+| 37  | インターフェース   | `IRepository`    | インターフェース、implements、型契約     |
+| 38  | 継承と抽象クラス   | `BaseRepository` | extends、abstract、ポリモーフィズム      |
+| 39  | アクセス修飾子     | `PrivateUser`    | private、protected、public               |
+| 40  | ジェネリッククラス | `Repository<T>`  | クラスの型パラメータ、型安全なリポジトリ |
 
 **フェーズ8のポイント:**
 
@@ -145,13 +145,13 @@ TypeScriptの基本的な型システムをじっくり固めます。初心者�
 
 ### フェーズ9: 条件型と型推論（Day41-45）
 
-| Day | テーマ | 関数名例 | 学習内容 |
-|-----|--------|----------|----------|
-| 41 | Conditional Types | `IsString` | 条件型、型レベルの分岐 |
-| 42 | infer キーワード | `ReturnType` | 型の抽出、型推論、infer |
-| 43 | Template Literal Types | `EventName` | 文字列型の操作、型レベルの文字列結合 |
-| 44 | Recursive Types | `DeepPartial` | 再帰的な型、ネストした構造 |
-| 45 | 型レベル関数の合成 | `Compose` | 型の変換、パイプライン |
+| Day | テーマ                 | 関数名例      | 学習内容                             |
+| --- | ---------------------- | ------------- | ------------------------------------ |
+| 41  | Conditional Types      | `IsString`    | 条件型、型レベルの分岐               |
+| 42  | infer キーワード       | `ReturnType`  | 型の抽出、型推論、infer              |
+| 43  | Template Literal Types | `EventName`   | 文字列型の操作、型レベルの文字列結合 |
+| 44  | Recursive Types        | `DeepPartial` | 再帰的な型、ネストした構造           |
+| 45  | 型レベル関数の合成     | `Compose`     | 型の変換、パイプライン               |
 
 **フェーズ9のポイント:**
 
@@ -161,13 +161,13 @@ TypeScriptの基本的な型システムをじっくり固めます。初心者�
 
 ### フェーズ10: 実践的なパターン（Day46-50）
 
-| Day | テーマ | 関数名例 | 学習内容 |
-|-----|--------|----------|----------|
-| 46 | Builder Pattern | `UserBuilder` | メソッドチェーン、Fluent Interface |
-| 47 | State Machine | `TrafficLight` | 状態遷移、型レベルの状態管理 |
-| 48 | Branded Types | `UserId` | 名目的型付け、型の区別 |
-| 49 | Parser Combinator | `parseJson` | パーサー、型安全なパース |
-| 50 | Validation Pipeline | `validate` | バリデーション、型の保証 |
+| Day | テーマ              | 関数名例       | 学習内容                           |
+| --- | ------------------- | -------------- | ---------------------------------- |
+| 46  | Builder Pattern     | `UserBuilder`  | メソッドチェーン、Fluent Interface |
+| 47  | State Machine       | `TrafficLight` | 状態遷移、型レベルの状態管理       |
+| 48  | Branded Types       | `UserId`       | 名目的型付け、型の区別             |
+| 49  | Parser Combinator   | `parseJson`    | パーサー、型安全なパース           |
+| 50  | Validation Pipeline | `validate`     | バリデーション、型の保証           |
 
 **フェーズ10のポイント:**
 
@@ -177,13 +177,13 @@ TypeScriptの基本的な型システムをじっくり固めます。初心者�
 
 ### フェーズ11: 型システムの深い理解（Day51-55）
 
-| Day | テーマ | 関数名例 | 学習内容 |
-|-----|--------|----------|----------|
-| 51 | Variance（共変・反変） | `Covariant` | 型の互換性、関数の代入可能性 |
-| 52 | 構造的型付け | `StructuralType` | Duck Typing、構造的部分型 |
-| 53 | 型の絞り込み詳細 | `narrowing` | 型ガード、制御フロー分析 |
-| 54 | 型アサーション | `assertType` | as、型の明示的な変換 |
-| 55 | 型の互換性 | `compatibility` | 代入可能性、型の関係性 |
+| Day | テーマ                 | 関数名例         | 学習内容                     |
+| --- | ---------------------- | ---------------- | ---------------------------- |
+| 51  | Variance（共変・反変） | `Covariant`      | 型の互換性、関数の代入可能性 |
+| 52  | 構造的型付け           | `StructuralType` | Duck Typing、構造的部分型    |
+| 53  | 型の絞り込み詳細       | `narrowing`      | 型ガード、制御フロー分析     |
+| 54  | 型アサーション         | `assertType`     | as、型の明示的な変換         |
+| 55  | 型の互換性             | `compatibility`  | 代入可能性、型の関係性       |
 
 **フェーズ11のポイント:**
 
@@ -193,13 +193,13 @@ TypeScriptの基本的な型システムをじっくり固めます。初心者�
 
 ### フェーズ12: 型レベルプログラミング（Day56-60）
 
-| Day | テーマ | 関数名例 | 学習内容 |
-|-----|--------|----------|----------|
-| 56 | 型レベル計算 | `Add` | 型レベルでの数値計算 |
-| 57 | 型レベル文字列操作 | `Capitalize` | 文字列の型レベル変換 |
-| 58 | 型レベルリスト操作 | `Map` | タプルの型レベル変換 |
-| 59 | 型レベルロジック | `And` | 真偽値の型レベル演算 |
-| 60 | 型システムの限界 | `Limits` | 再帰制限、型システムの制約 |
+| Day | テーマ             | 関数名例     | 学習内容                   |
+| --- | ------------------ | ------------ | -------------------------- |
+| 56  | 型レベル計算       | `Add`        | 型レベルでの数値計算       |
+| 57  | 型レベル文字列操作 | `Capitalize` | 文字列の型レベル変換       |
+| 58  | 型レベルリスト操作 | `Map`        | タプルの型レベル変換       |
+| 59  | 型レベルロジック   | `And`        | 真偽値の型レベル演算       |
+| 60  | 型システムの限界   | `Limits`     | 再帰制限、型システムの制約 |
 
 **フェーズ12のポイント:**
 

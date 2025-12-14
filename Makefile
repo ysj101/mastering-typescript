@@ -1,4 +1,4 @@
-.PHONY: help setup install test typecheck watch clean
+.PHONY: help setup install test typecheck watch clean format format-check
 
 # デフォルトターゲット
 .DEFAULT_GOAL := help
@@ -11,10 +11,11 @@ help: ## このヘルプメッセージを表示
 		awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36mmake %-15s\033[0m %s\n", $$1, $$2}'
 	@echo ""
 	@echo "または npm コマンド:"
-	@echo "  npm install      依存関係をインストール"
-	@echo "  npm run setup    初回セットアップ"
-	@echo "  npm test         テスト実行"
+	@echo "  npm install       依存関係をインストール"
+	@echo "  npm run setup     初回セットアップ"
+	@echo "  npm test          テスト実行"
 	@echo "  npm run typecheck 型チェック"
+	@echo "  npm run format    コードフォーマット"
 
 setup: ## 初回セットアップ（src/ から solutions/ へコピー）
 	@bash scripts/setup.sh
@@ -32,6 +33,14 @@ typecheck: ## 型チェックを実行
 
 watch: ## テストをwatch modeで実行
 	@npm run test:watch
+
+format: ## コードをフォーマット（Markdown/TypeScript/JSON）
+	@echo "🎨 コードをフォーマット中..."
+	@npm run format
+	@echo "✅ フォーマット完了"
+
+format-check: ## フォーマットのチェックのみ（変更なし）
+	@npm run format:check
 
 clean: ## solutions/ ディレクトリをクリーン（注意: 実装が消えます）
 	@echo "⚠️  solutions/ ディレクトリを削除します..."
@@ -53,4 +62,4 @@ init: install setup ## 初回セットアップ（install + setup）
 	@echo "  - src/dayXX/README.md で問題を確認"
 	@echo "  - make test でテスト実行"
 
-all: typecheck test ## 型チェックとテストを両方実行
+all: format typecheck test ## フォーマット、型チェック、テストを実行

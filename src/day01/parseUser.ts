@@ -8,9 +8,7 @@ export type User = {
   age: number;
 };
 
-export type Result<T> =
-  | { ok: true; value: T }
-  | { ok: false; error: string };
+export type Result<T> = { ok: true; value: T } | { ok: false; error: string };
 
 export function parseUser(input: unknown): Result<User> {
   // ===== ステップ1: オブジェクトかチェック =====
@@ -18,7 +16,6 @@ export function parseUser(input: unknown): Result<User> {
   // return { ok: false, error: "Input must be an object" };
 
   // TODO: ここにステップ1のコードを書く
-
 
   // ===== ステップ2: idプロパティのチェック =====
   // idプロパティが存在しない場合
@@ -29,7 +26,6 @@ export function parseUser(input: unknown): Result<User> {
 
   // TODO: ここにステップ2のコードを書く
 
-
   // ===== ステップ3: ageプロパティのチェック =====
   // ageプロパティが存在しない場合
   // return { ok: false, error: "Missing required property: age" };
@@ -38,7 +34,6 @@ export function parseUser(input: unknown): Result<User> {
   // return { ok: false, error: "Property 'age' must be a number" };
 
   // TODO: ここにステップ3のコードを書く
-
 
   // ===== ステップ4: 成功を返す =====
   // すべてのチェックが通ったら、Userオブジェクトを返す

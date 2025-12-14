@@ -7,7 +7,9 @@
     "setup": "bash scripts/setup.sh",
     "test": "jest",
     "test:watch": "jest --watch",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write \"**/*.{md,json,ts}\"",
+    "format:check": "prettier --check \"**/*.{md,json,ts}\""
   },
   "keywords": [],
   "author": "",
@@ -17,6 +19,7 @@
     "@types/jest": "^30.0.0",
     "@types/node": "^25.0.1",
     "jest": "^30.2.0",
+    "prettier": "^3.7.4",
     "ts-jest": "^29.4.6",
     "typescript": "^5.9.3"
   }

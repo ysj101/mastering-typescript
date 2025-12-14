@@ -14,13 +14,13 @@
 
 ```typescript
 // any型: 何でもできる（危険）
-let value1: any = "hello";
+let value1: any = 'hello';
 value1.toUpperCase(); // OK（実行時エラーの可能性）
 
 // unknown型: 型チェックが必須（安全）
-let value2: unknown = "hello";
+let value2: unknown = 'hello';
 // value2.toUpperCase(); // ❌ エラー: 型が不明
-if (typeof value2 === "string") {
+if (typeof value2 === 'string') {
   value2.toUpperCase(); // ✅ OK: 型が絞り込まれた
 }
 ```
@@ -34,11 +34,11 @@ if (typeof value2 === "string") {
 ```typescript
 // typeof による型ガード
 function processValue(value: unknown) {
-  if (typeof value === "string") {
+  if (typeof value === 'string') {
     // この中では value は string 型
     return value.toUpperCase();
   }
-  if (typeof value === "number") {
+  if (typeof value === 'number') {
     // この中では value は number 型
     return value.toFixed(2);
   }
@@ -46,7 +46,7 @@ function processValue(value: unknown) {
 
 // in演算子による型ガード
 function hasId(obj: unknown): obj is { id: unknown } {
-  return typeof obj === "object" && obj !== null && "id" in obj;
+  return typeof obj === 'object' && obj !== null && 'id' in obj;
 }
 ```
 
@@ -63,9 +63,7 @@ function hasId(obj: unknown): obj is { id: unknown } {
 Result型は、成功/失敗を型安全に表現するパターンです。
 
 ```typescript
-type Result<T> =
-  | { ok: true; value: T }
-  | { ok: false; error: string };
+type Result<T> = { ok: true; value: T } | { ok: false; error: string };
 
 // 成功の場合
 const success: Result<number> = {
@@ -76,13 +74,13 @@ const success: Result<number> = {
 // 失敗の場合
 const failure: Result<number> = {
   ok: false,
-  error: "Invalid input",
+  error: 'Invalid input',
 };
 
 // 使い方
 function divide(a: number, b: number): Result<number> {
   if (b === 0) {
-    return { ok: false, error: "Division by zero" };
+    return { ok: false, error: 'Division by zero' };
   }
   return { ok: true, value: a / b };
 }
@@ -147,13 +145,10 @@ type User = {
 export function parseUser(input: unknown): Result<User> {
   // Step 1: inputがオブジェクトかチェック
   // typeof input === "object" && input !== null
-
   // Step 2: idプロパティの存在と型をチェック
   // "id" in input && typeof input.id === "string"
-
   // Step 3: ageプロパティの存在と型をチェック
   // "age" in input && typeof input.age === "number"
-
   // Step 4: すべてのチェックが通ったら成功を返す
   // return { ok: true, value: { id: input.id, age: input.age } };
 }
@@ -163,23 +158,23 @@ export function parseUser(input: unknown): Result<User> {
 
 ```typescript
 // 成功ケース
-parseUser({ id: "user123", age: 25 })
+parseUser({ id: 'user123', age: 25 });
 // => { ok: true, value: { id: "user123", age: 25 } }
 
 // 失敗ケース1: idが数値
-parseUser({ id: 123, age: 25 })
+parseUser({ id: 123, age: 25 });
 // => { ok: false, error: "Property 'id' must be a string" }
 
 // 失敗ケース2: ageが文字列
-parseUser({ id: "user123", age: "25" })
+parseUser({ id: 'user123', age: '25' });
 // => { ok: false, error: "Property 'age' must be a number" }
 
 // 失敗ケース3: プロパティ欠落
-parseUser({ id: "user123" })
+parseUser({ id: 'user123' });
 // => { ok: false, error: "Missing required property: age" }
 
 // 失敗ケース4: オブジェクトでない
-parseUser("not an object")
+parseUser('not an object');
 // => { ok: false, error: "Input must be an object" }
 ```
 
@@ -189,8 +184,8 @@ parseUser("not an object")
 
 ```typescript
 // まずオブジェクトかチェック
-if (typeof input !== "object" || input === null) {
-  return { ok: false, error: "Input must be an object" };
+if (typeof input !== 'object' || input === null) {
+  return { ok: false, error: 'Input must be an object' };
 }
 
 // ここまで来たら input は object型（nullでない）
@@ -202,12 +197,12 @@ if (typeof input !== "object" || input === null) {
 
 ```typescript
 // プロパティが存在するかチェック
-if (!("id" in input)) {
-  return { ok: false, error: "Missing required property: id" };
+if (!('id' in input)) {
+  return { ok: false, error: 'Missing required property: id' };
 }
 
 // 存在することが確認できたら、型をチェック
-if (typeof input.id !== "string") {
+if (typeof input.id !== 'string') {
   return { ok: false, error: "Property 'id' must be a string" };
 }
 ```
