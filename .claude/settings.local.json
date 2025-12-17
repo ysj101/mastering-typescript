@@ -5,6 +5,7 @@
       "Bash(npm run typecheck:*)",
       "Bash(npm test:*)",
       "Bash(mkdir:*)",
+      "Bash(cp:*)",
       "Bash(ls:*)",
       "Bash(npm run format:*)",
       "Bash(npx prettier:*)",
