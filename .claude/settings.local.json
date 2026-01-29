@@ -11,7 +11,8 @@
       "Bash(npx prettier:*)",
       "Write(src/**)",
       "Write(solutions/**)",
-      "Write(tests/**)"
+      "Write(tests/**)",
+      "Bash(npx jest:*)"
     ],
     "deny": [],
     "ask": []
